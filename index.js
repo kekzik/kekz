@@ -6,14 +6,14 @@ bot.onText(/\/start/, function (msg, match) {
     var userId = msg.from.id;
     var text = match[1];
     var time = match[2];
-    notes.push({'uid': userId, 'time': time, 'text': text});
+    notes.push({'uid': userId, 'text': 'пиши мне сообщения'});
     bot.sendMessage(userId, 'Привет');
 });
 setInterval(function () {
     for (var i = 0; i < notes.length; i++) {
         var curDate = new Date().getHours() + ':' + new Date().getMinutes();
         if (curDate == curDate) {
-            bot.sendMessage(notes[i]['uid'], 'Напоминаю, что вы должны: ' + notes[i]['text'] + ' сейчас.');
+            bot.sendMessage(notes[i]['uid'], notes[i]['text']);
             notes.splice(i, 1);
         }
     }
