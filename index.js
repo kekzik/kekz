@@ -11,10 +11,6 @@ bot.onText(/\/start/, function (msg, match) {
 });
 setInterval(function () {
     for (var i = 0; i < notes.length; i++) {
-        var curDate = new Date().getHours() + ':' + new Date().getMinutes();
-        if (curDate == curDate) {
-            bot.sendMessage(notes[i]['uid'], notes[i]['text']);
-            //notes.splice(i, 1);
-        }
+        bot.sendMessage(notes[i]['uid'], notes[i]['text']);
     }
 }, 5000);
