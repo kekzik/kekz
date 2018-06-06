@@ -14,7 +14,7 @@ setInterval(function () {
         var curDate = new Date().getHours() + ':' + new Date().getMinutes();
         if (curDate == curDate) {
             bot.sendMessage(notes[i]['uid'], notes[i]['text']);
-            notes.splice(i, 1);
+            //notes.splice(i, 1);
         }
     }
-}, 1000);
+}, 5000);
