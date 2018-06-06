@@ -2,13 +2,12 @@
   "name": "hydra_get_btc_bot",
   "version": "1.0.0",
   "description": "my first telegram bot",
-  "main": "index.js",
   "dependencies": {
     "node-telegram-bot-api": "^0.30.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js"
   },
   "engines": {
     "node": "9.3.0"
