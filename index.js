@@ -7,7 +7,7 @@ bot.onText(/\/напомни (.+) в (.+)/, function (msg, match) {
     var text = match[1];
     var time = match[2];
     notes.push({'uid': userId, 'time': time, 'text': text});
-    bot.sendMessage(userId, 'Отлично! Я обязательно напомню, если не сдохну :)');
+    bot.sendMessage(userId, 'Отлично! Я обязательно напомню, если не сдохну :1111)');
 });
 setInterval(function () {
     for (var i = 0; i < notes.length; i++) {
